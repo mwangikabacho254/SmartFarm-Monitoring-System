@@ -1,43 +1,58 @@
-SmartFarm-Monitoring-System
+SmartFarm Monitoring System
+GSM-based IoT soil moisture monitoring for precision agriculture.
 
- Overview
-An IoT-based smart farming solution that monitors soil moisture and sends automated SMS alerts to farmers. This system provides regular and on-demand moisture reports, enabling precision agriculture even in remote locations.
+Overview
+SmartFarm is a low-cost, field-ready IoT system designed to monitor soil moisture and provide real-time updates to farmers via SMS. Built for reliability in remote areas, the system automates data collection and eliminates the need for manual field checks.
+It supports both scheduled alerts and on-demand queries, helping smallholder farmers make timely irrigation decisions. All moisture readings are recorded in both raw and percentage formats.
 
- Features
-- GSM-based soil moisture monitoring
-- Automatic SMS updates every 30 minutes
-- Manual updates triggered by SMS keywords
-- Moisture data provided as both raw ADC and percentage values
-- Filters non-Kenyan numbers for security
-- Real-time serial debug output for development and diagnostics
+Key Features
+GSM-based soil moisture monitoring using SIM800L
+Automatic SMS alerts every 30 minutes
+Manual updates triggered by SMS keyword (e.g., “Moisture”)
+Moisture readings provided as raw ADC and percentage
+Filters non-Kenyan phone numbers for basic access control
+Real-time serial debug output for diagnostics
 
- Hardware Used
-- Microcontroller: Arduino Mega
-- GSM Module: SIM800L
-- Soil Moisture Sensor: Analog (resistive)
-- Power Source: 12V Battery Supply
-- Optional: 16x2 LCD (for local display)
+Hardware Components
+Component	Description
+Arduino Mega	Main microcontroller
+SIM800L Module	GSM communication
+Analog Soil Sensor	Resistive moisture sensor
+12V Battery Supply	System power
+16x2 LCD (optional)	For local display (debug/info)
 
- Software
-- Written in C++ using Arduino IDE
-- Uses SoftwareSerial for GSM communication
-- Includes modular functions for:
-  - SMS sending/receiving
-  - Sensor reading and conversion
-  - Scheduled task execution
+Software Details
+Written in C++ using Arduino IDE
+Uses SoftwareSerial for SIM800L communication
 
- Setup Instructions
-1. Connect the hardware as per the schematic (to be uploaded in `/docs`).
-2. Flash the code from the `/src` directory using Arduino IDE.
-3. Insert a SIM card into the GSM module (ensure PIN is disabled).
-4. Power the system and monitor serial output for logs.
-5. Send SMS with the word Moisture to receive an update manually.
+Modular functions for:
+Sensor reading and moisture conversion
+SMS sending and response handling
+Scheduled 30-minute task execution
+Basic number filtering for security
 
-Phase 1 Goals Achieved
-- Moisture sensing and percentage conversion
-- Stable SMS communication via SIM800L
-- Command parsing via keyword detection
-- Working security filter (Kenyan numbers only)
+Setup Instructions
+Connect components according to the schematic (to be added in docs/)
+Upload the firmware from src/ using Arduino IDE
+Insert a SIM card (PIN disabled) into the GSM module
+Power on the system and observe serial output for logs
+Send an SMS with the word “Moisture” to trigger a manual update
+
+
+Development Status
+Phase 1 Goals Achieved:
+Stable soil moisture sensing
+Accurate percentage conversion
+Reliable SMS communication with SIM800L
+Keyword command parsing (“Moisture”)
+Number filtering for Kenyan +254 format
+
+Documentation (coming soon)
+Technical Manual
+Schematic Diagram 
 
 License
 This project is licensed under the MIT License.
+See the LICENSE file for details.
+
+Maintained by Ephraim Mwangi — 2025
