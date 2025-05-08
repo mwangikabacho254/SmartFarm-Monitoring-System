@@ -12,7 +12,7 @@ Automatic SMS alerts every 30 minutes
 Manual updates triggered by SMS keyword (e.g., “Moisture”)
 Moisture readings provided as raw ADC and percentage
 Filters non-Kenyan phone numbers for basic access control
-Real-time serial debug output for diagnostics
+Real-time serial debug output for diagnostics.
 
 Hardware Components
 Component	Description
