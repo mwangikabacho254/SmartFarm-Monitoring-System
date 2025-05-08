@@ -13,7 +13,7 @@ Manual updates triggered by SMS keyword (e.g., “Moisture”)
 Moisture readings provided as raw ADC and percentage
 Filters non-Kenyan phone numbers for basic access control
 Real-time serial debug output for diagnostics
-hhhhhhh
+hhhhh
 Hardware Components
 Component	Description
 Arduino Mega	Main microcontroller
